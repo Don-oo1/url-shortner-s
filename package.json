@@ -4,7 +4,8 @@
   "description": "conver valid usrl into short uurl",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+     "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "nirmal odedara",
   "license": "ISC",
