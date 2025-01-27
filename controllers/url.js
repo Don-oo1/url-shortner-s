@@ -10,9 +10,10 @@ async function  handleCreateShortId(req, res){
         redirectUrl:redirectUrl,
         viewHistory:[]
     })
-
+    const allUrls = await Url.find({})
     return res.render("home",{
         "shortId":shortId,
+        urls:allUrls,
     })
     // return res.json({"short-id":shortId})
 
