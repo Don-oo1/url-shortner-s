@@ -13,8 +13,9 @@
 <body>
     <h1>URL Shortner</h1>
     <%  if (locals.shortId)  {%>
-        <p>URL Genrated: http://localhost:8000/<%= shortId %></p>
-
+        <p>URL Genrated:<%= shortUrl %></p>
+    <% } else { %>
+        <p>URL Example:<%= shortUrl %></p>
     <% } %>
      
     <form method="POST" action="/url">

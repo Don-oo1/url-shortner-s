@@ -8,12 +8,16 @@ async function  handleCreateShortId(req, res){
     await Url.create({
         shortId:shortId,
         redirectUrl:redirectUrl,
-        viewHistory:[]
+        viewHistory:[],
+
     })
     const allUrls = await Url.find({})
+    const shortUrl = `${req.protocol}://${req.get('host')}/${shortId}`
     return res.render("home",{
         "shortId":shortId,
         urls:allUrls,
+        shortUrl:shortUrl,
+
     })
     // return res.json({"short-id":shortId})
 
