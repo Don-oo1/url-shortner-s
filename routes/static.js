@@ -1,14 +1,10 @@
 const express = require("express")
-
-
-
+const {renderHomePageHandler} =require("../controllers/static")
 
 const router = express.Router()
 
-router.get("/", (req,res)=>{
-     res.render("index.ejs")
-    res.end()
-})
+router.get("/", renderHomePageHandler)
+
 module.exports = {
     staticRouter:router,
 }

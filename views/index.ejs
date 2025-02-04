@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>helloe word</h1>
+    <h1>Url Shortner</h1>
+    <form action="/url" method="post">
+        <label for="url">URL:</label>
+        <input id="url" type="text" name="url">
+        <button type="submit">Genrate</button>
+    </form>
 </body>
 </html>
