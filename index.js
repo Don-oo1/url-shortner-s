@@ -42,4 +42,12 @@ app.post("/url",async (req, res)=>{
     res.json({shortId:shortIdUrl})
 })
 
+app.get("/:shortId",async(req,res)=>{
+    const shortId = req.params.shortId
+    const url = await Url.findOne({shortId})
+    console.log(url.redirectUrl)
+    res.redirect("https://www.google.es/")
+
+})
+
 app.listen(PORT, ()=>{console.log("server started 🚀")})
